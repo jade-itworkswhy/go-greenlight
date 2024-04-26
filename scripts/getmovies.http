@@ -1,0 +1,1 @@
+GET http://127.0.0.1:4000/v1/movies/1 HTTP/1.1

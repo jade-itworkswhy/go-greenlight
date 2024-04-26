@@ -7,9 +7,9 @@ This little practice follows the book, [Let's Go Further](https://lets-go-furthe
 - [x] 1.1. Prerequisites
 
 2. Getting Started
-- [ ] 2.1. Project Setup and Skeleton Structure
-- [ ] 2.2. A Basic HTTP Server
-- [ ] 2.3. API Endpoints and RESTful Routing
+- [x] 2.1. Project Setup and Skeleton Structure
+- [x] 2.2. A Basic HTTP Server
+- [x] 2.3. API Endpoints and RESTful Routing
 
 3. Sending JSON Responses
 - [ ] 3.1. Fixed-Format JSON
