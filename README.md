@@ -12,8 +12,8 @@ This little practice follows the book, [Let's Go Further](https://lets-go-furthe
 - [x] 2.3. API Endpoints and RESTful Routing
 
 3. Sending JSON Responses
-- [ ] 3.1. Fixed-Format JSON
-- [ ] 3.2. JSON Encoding
+- [x] 3.1. Fixed-Format JSON
+- [x] 3.2. JSON Encoding
 - [ ] 3.3. Encoding Structs
 - [ ] 3.4. Formatting and Enveloping Responses
 - [ ] 3.5. Advanced JSON Customization
