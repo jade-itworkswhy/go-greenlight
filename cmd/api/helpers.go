@@ -25,11 +25,13 @@ func (app *application) readIDParam(r *http.Request) (int64, error) {
 	return id, nil
 }
 
-func (app *application) writeJSON(w http.ResponseWriter, status int, data any, headers http.Header) error {
+type envelope map[string]any
+
+func (app *application) writeJSON(w http.ResponseWriter, status int, data envelope, headers http.Header) error {
 	// try encoding data to json
 	// returns []byte slice(containing encoded JSON)
 	// alphabetically sorted
-	js, err := json.Marshal(data)
+	js, err := json.MarshalIndent(data, "", "\t") // no line prefix, tab indents, note - performance can be affected
 	if err != nil {
 		return err
 	}
