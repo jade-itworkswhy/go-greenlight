@@ -1,0 +1,5 @@
+# check options
+OPTIONS http://127.0.0.1:4000/v1/healthcheck HTTP/1.1
+
+# health check
+GET http://127.0.0.1:4000/v1/healthcheck HTTP/1.1

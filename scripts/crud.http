@@ -1,0 +1,14 @@
+### create movie
+POST http://127.0.0.1:4000/v1/movies HTTP/1.1
+content-type: application/json
+
+{
+  "title": "Moana",
+  "year": 2016,
+  "runtime":107, 
+  "genres":["animation", "adventure"]
+}
+
+### get movie by id
+
+GET http://127.0.0.1:4000/v1/movies/1 HTTP/1.1
