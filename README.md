@@ -17,7 +17,7 @@ This little practice follows the book, [Let's Go Further](https://lets-go-furthe
 - [x] 3.3. Encoding Structs
 - [x] 3.4. Formatting and Enveloping Responses
 - [x] 3.5. Advanced JSON Customization
-- [ ] 3.6. Sending Error Messages
+- [x] 3.6. Sending Error Messages
 
 4. Parsing JSON Requests
 - [ ] 4.1. JSON Decoding
