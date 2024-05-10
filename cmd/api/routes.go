@@ -10,6 +10,10 @@ func (app *application) routes() http.Handler {
 	// init a new httprouter instance
 	router := httprouter.New()
 
+	// custom adapter
+	router.NotFound = http.HandlerFunc(app.notFoundResponse)
+	router.MethodNotAllowed = http.HandlerFunc(app.methodNotAllowedResponse)
+
 	// register routers
 	router.HandlerFunc(http.MethodGet, "/v1/healthcheck", app.healthcheckHandler)
 	router.HandlerFunc(http.MethodPost, "/v1/movies", app.createMovieHandler)
