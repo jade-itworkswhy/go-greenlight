@@ -29,6 +29,11 @@ func (app *application) serverErrorResponse(w http.ResponseWriter, r *http.Reque
 	app.errorResponse(w, r, http.StatusInternalServerError, message)
 }
 
+// 400
+func (app *application) badRequestResponse(w http.ResponseWriter, r *http.Request, err error) {
+	app.errorResponse(w, r, http.StatusBadRequest, err.Error())
+}
+
 // 404
 func (app *application) notFoundResponse(w http.ResponseWriter, r *http.Request) {
 	message := "the requested resource could not be found"

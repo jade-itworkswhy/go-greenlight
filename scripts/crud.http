@@ -1,3 +1,8 @@
+
+### get movie by id
+
+GET http://127.0.0.1:4000/v1/movies/1 HTTP/1.1
+
 ### create movie
 POST http://127.0.0.1:4000/v1/movies HTTP/1.1
 content-type: application/json
@@ -9,6 +14,22 @@ content-type: application/json
   "genres":["animation", "adventure"]
 }
 
-### get movie by id
+### input error tests
+POST http://127.0.0.1:4000/v1/movies HTTP/1.1
+content-type: application/json
 
-GET http://127.0.0.1:4000/v1/movies/1 HTTP/1.1
+{"title": "Moana", "rating":"PG"}
+
+### 
+
+POST http://127.0.0.1:4000/v1/movies HTTP/1.1
+content-type: application/json
+
+{"title": "Moana"}{"title": "Top Gun"}
+
+### 
+
+POST http://127.0.0.1:4000/v1/movies HTTP/1.1
+content-type: application/json
+
+{"title": "Moana"} :~()

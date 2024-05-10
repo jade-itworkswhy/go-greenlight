@@ -20,9 +20,9 @@ This little practice follows the book, [Let's Go Further](https://lets-go-furthe
 - [x] 3.6. Sending Error Messages
 
 4. Parsing JSON Requests
-- [ ] 4.1. JSON Decoding
-- [ ] 4.2. Managing Bad Requests
-- [ ] 4.3. Restricting Inputs
+- [x] 4.1. JSON Decoding
+- [x] 4.2. Managing Bad Requests
+- [x] 4.3. Restricting Inputs
 - [ ] 4.4. Custom JSON Decoding
 - [ ] 4.5. Validating JSON Input
 
