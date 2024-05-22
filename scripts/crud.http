@@ -18,7 +18,7 @@ content-type: application/json
 POST http://127.0.0.1:4000/v1/movies HTTP/1.1
 content-type: application/json
 
-{"title": "Moana", "rating":"PG"}
+{"title":"","year":1000,"runtime":"-123 mins","genres":["sci-fi","sci-fi"]}
 
 ### 
 
