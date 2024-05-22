@@ -1,19 +1,37 @@
 package data
 
 import (
-	"fmt"
+	"errors"
 	"strconv"
+	"strings"
 )
+
+var ErrInvalidRuntimeFormat = errors.New("invalid runtime format")
 
 type Runtime int32
 
-func (r Runtime) MarshalJSON() ([]byte, error) { // will work for both value and pointer argument
-	// custom string for runtime formatting
-	jsonValue := fmt.Sprintf("%d mins", r)
+func (r *Runtime) MarshalJSON(jsonValue []byte) error {
+	// unquote the string from the input jsonValue param
+	unquotedJSONValue, err := strconv.Unquote(string(jsonValue))
 
-	// wrap with double quotes for valid json
-	quotedJSONValue := strconv.Quote(jsonValue)
+	if err != nil {
+		return ErrInvalidRuntimeFormat
+	}
 
-	// return byte slice
-	return []byte(quotedJSONValue), nil
+	// split the runtime string to isolate number
+	parts := strings.Split(unquotedJSONValue, " ")
+
+	// sanity check(expected example: 3 mins)
+	if len(parts) != 2 || parts[1] != "mins" {
+		return ErrInvalidRuntimeFormat
+	}
+
+	i, err := strconv.ParseInt(parts[0], 10, 32)
+
+	if err != nil {
+		return ErrInvalidRuntimeFormat
+	}
+
+	*r = Runtime(i)
+	return nil
 }
