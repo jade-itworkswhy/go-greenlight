@@ -22,3 +22,5 @@ go.work
 
 # air tmp dir
 tmp
+
+*.env
