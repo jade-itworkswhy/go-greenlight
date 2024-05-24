@@ -36,11 +36,11 @@ This little practice follows the book, [Let's Go Further](https://lets-go-furthe
 - [x] 6.2. Working with SQL Migrations
 
 7. CRUD Operations
-- [ ] 7.1. Setting up the Movie Model
-- [ ] 7.2. Creating a New Movie
-- [ ] 7.3. Fetching a Movie
-- [ ] 7.4. Updating a Movie
-- [ ] 7.5. Deleting a Movie
+- [x] 7.1. Setting up the Movie Model
+- [x] 7.2. Creating a New Movie
+- [x] 7.3. Fetching a Movie
+- [x] 7.4. Updating a Movie
+- [x] 7.5. Deleting a Movie
 
 8. Advanced CRUD Operations
 - [ ] 8.1. Handling Partial Updates

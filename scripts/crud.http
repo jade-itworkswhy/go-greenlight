@@ -1,28 +1,72 @@
 
 ### get movie by id
 
-GET http://127.0.0.1:4000/v1/movies/1 HTTP/1.1
+GET http://127.0.0.1:4000/v1/movies/3 HTTP/1.1
 
-### create movie
-POST http://127.0.0.1:4001/v1/movies HTTP/1.1
+
+
+### update movie by id
+
+PUT http://127.0.0.1:4000/v1/movies/2 HTTP/1.1
+content-type: application/json
+
+{"title":"Black Panther","year":2018,"runtime":"134 mins","genres":["sci-fi","action","adventure"]}
+
+
+
+
+### delete movie by id
+
+DELETE  http://127.0.0.1:4000/v1/movies/3 HTTP/1.1
+content-type: application/json
+
+
+### create movie 1
+POST http://127.0.0.1:4000/v1/movies HTTP/1.1
 content-type: application/json
 
 {
-  "title": "Moana",
-  "year": 2016,
-  "runtime":107, 
-  "genres":["animation", "adventure"]
+  "title":"Moana",
+  "year":2016,
+  "runtime":"107 mins",
+  "genres":["animation","adventure"]
 }
 
+
+### create movie 2 
+POST http://127.0.0.1:4000/v1/movies HTTP/1.1
+content-type: application/json
+
+{"title":"Black Panther","year":2018,"runtime":"134 mins","genres":["action","adventure"]}
+
+
+### create movie 3 
+POST http://127.0.0.1:4000/v1/movies HTTP/1.1
+content-type: application/json
+
+{"title":"Deadpool","year":2016, "runtime":"108 mins","genres":["action","comedy"]}
+
+
+### create movie 4
+POST http://127.0.0.1:4000/v1/movies HTTP/1.1
+content-type: application/json
+
+{"title":"The Breakfast Club","year":1986, "runtime":"96 mins","genres":["drama"]}
+
+
+
+
+
+
 ### input error tests
-POST http://127.0.0.1:4001/v1/movies HTTP/1.1
+POST http://127.0.0.1:4000/v1/movies HTTP/1.1
 content-type: application/json
 
 {"title":"","year":1000,"runtime":"-123 mins","genres":["sci-fi","sci-fi"]}
 
 ### 
 
-POST http://127.0.0.1:4001/v1/movies HTTP/1.1
+POST http://127.0.0.1:4000/v1/movies HTTP/1.1
 content-type: application/json
 
 {"title":"Moana","runtime":"123 mins"}
