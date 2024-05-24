@@ -27,13 +27,13 @@ This little practice follows the book, [Let's Go Further](https://lets-go-furthe
 - [x] 4.5. Validating JSON Input
 
 5. Database Setup and Configuration
-- [ ] 5.1. Setting up PostgreSQL
-- [ ] 5.2. Connecting to PostgreSQL
-- [ ] 5.3. Configuring the Database Connection Pool
+- [x] 5.1. Setting up PostgreSQL
+- [x] 5.2. Connecting to PostgreSQL
+- [x] 5.3. Configuring the Database Connection Pool
 
 6. SQL Migrations
-- [ ] 6.1. An Overview of SQL Migrations
-- [ ] 6.2. Working with SQL Migrations
+- [x] 6.1. An Overview of SQL Migrations
+- [x] 6.2. Working with SQL Migrations
 
 7. CRUD Operations
 - [ ] 7.1. Setting up the Movie Model
