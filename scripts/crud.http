@@ -1,4 +1,20 @@
 
+### get movies
+GET http://127.0.0.1:4000/v1/movies?title=godfather&genres=crime,drama&page=1&page_size=5&sort=year HTTP/1.1
+
+### filter test
+GET http://127.0.0.1:4000/v1/movies?title=black+panther HTTP/1.1
+
+
+### full text search
+GET http://127.0.0.1:4000/v1/movies?title=black HTTP/1.1
+
+### filter test
+GET http://127.0.0.1:4000/v1/movies?genres=adventure HTTP/1.1
+
+### invalid query string
+GET http://127.0.0.1:4000/v1/movies?page=-1&page_size=-1&sort=foo HTTP/1.1
+
 ### get movie by id
 
 GET http://127.0.0.1:4000/v1/movies/2 HTTP/1.1
