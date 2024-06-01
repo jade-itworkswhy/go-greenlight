@@ -7,12 +7,24 @@ GET http://127.0.0.1:4000/v1/movies/3 HTTP/1.1
 
 ### update movie by id
 
-PUT http://127.0.0.1:4000/v1/movies/2 HTTP/1.1
+PATCH http://127.0.0.1:4000/v1/movies/2 HTTP/1.1
 content-type: application/json
 
-{"title":"Black Panther","year":2018,"runtime":"134 mins","genres":["sci-fi","action","adventure"]}
+{
+  "title":"Black Panther",
+  "year":2018,
+  "runtime":"134 mins",
+  "genres":["sci-fi","action","adventure"]
+}
 
 
+### partial information update
+PATCH http://127.0.0.1:4000/v1/movies/2 HTTP/1.1
+content-type: application/json
+
+{
+  "year":2016
+}
 
 
 ### delete movie by id
