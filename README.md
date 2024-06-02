@@ -58,9 +58,9 @@ This little practice follows the book, [Let's Go Further](https://lets-go-furthe
 - [x] 9.8. Returning Pagination Metadata
 
 10.  Rate Limiting
-- [ ] 10.1. Global Rate Limiting
-- [ ] 10.2. IP-based Rate Limiting
-- [ ] 10.3. Configuring the Rate Limiters
+- [x] 10.1. Global Rate Limiting
+- [x] 10.2. IP-based Rate Limiting
+- [x] 10.3. Configuring the Rate Limiters
 
 11.  Graceful Shutdown
 - [ ] 11.1. Sending Shutdown Signals
