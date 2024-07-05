@@ -4,10 +4,9 @@ import (
 	"context"
 	"database/sql"
 	"flag"
-	"fmt"
 	"log/slog"
-	"net/http"
 	"os"
+	"strconv"
 	"time"
 
 	"jade-factory/greenlight/internal/data"
@@ -51,13 +50,18 @@ func main() {
 
 	err := godotenv.Load()
 	if err != nil {
-		logger.Error("Error loading .env file")
-		os.Exit(1)
+		logger.Warn("Error loading .env file. Will use environment variables or defaults.")
 	}
 
 	// todo: if the env is not found
 	// read values
-	flag.IntVar(&cfg.port, "port", 4000, "API server port")
+	flag.IntVar(&cfg.port, "port", func() int {
+		if p, err := strconv.Atoi(os.Getenv("PORT")); err == nil {
+			return p
+		}
+		return 8080
+	}(), "API server port")
+
 	flag.StringVar(&cfg.env, "env", os.Getenv("ENV"), "Environment (development|staging|production)")
 
 	flag.StringVar(&cfg.db.dsn, "db-dsn", os.Getenv("DB_DSN"), "PostgreSQL DSN")
@@ -89,21 +93,11 @@ func main() {
 		models: data.NewModels(db),
 	}
 
-	// init server
-	srv := &http.Server{
-		Addr:         fmt.Sprintf("localhost:%d", cfg.port),
-		Handler:      app.routes(),
-		IdleTimeout:  time.Minute,
-		ReadTimeout:  5 * time.Second,
-		WriteTimeout: 10 * time.Second,
-		ErrorLog:     slog.NewLogLogger(logger.Handler(), slog.LevelError),
+	err = app.serve()
+	if err != nil {
+		logger.Error(err.Error())
+		os.Exit(1)
 	}
-	// start server
-	logger.Info("starting server", "addr", srv.Addr, "env", cfg.env)
-
-	err = srv.ListenAndServe()
-	logger.Error(err.Error())
-	os.Exit(1)
 }
 
 func openDB(cfg config) (*sql.DB, error) {

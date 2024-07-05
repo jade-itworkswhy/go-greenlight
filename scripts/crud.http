@@ -1,31 +1,33 @@
 ### health check
-GET http://127.0.0.1:4000/v1/healthcheck HTTP/1.1
+GET http://127.0.0.1:8080/v1/healthcheck HTTP/1.1
 
+### get all movies
+GET http://127.0.0.1:8080/v1/movies HTTP/1.1
 ### get movies
-GET http://127.0.0.1:4000/v1/movies?title=godfather&genres=crime,drama&page=1&page_size=5&sort=year HTTP/1.1
+GET http://127.0.0.1:8080/v1/movies?title=godfather&genres=crime,drama&page=1&page_size=5&sort=year HTTP/1.1
 
 ### filter test
-GET http://127.0.0.1:4000/v1/movies?title=black+panther HTTP/1.1
+GET http://127.0.0.1:8080/v1/movies?title=black+panther HTTP/1.1
 
 
 ### full text search
-GET http://127.0.0.1:4000/v1/movies?title=black HTTP/1.1
+GET http://127.0.0.1:8080/v1/movies?title=black HTTP/1.1
 
 ### filter test
-GET http://127.0.0.1:4000/v1/movies?genres=adventure HTTP/1.1
+GET http://127.0.0.1:8080/v1/movies?genres=adventure HTTP/1.1
 
 ### invalid query string
-GET http://127.0.0.1:4000/v1/movies?page=-1&page_size=-1&sort=foo HTTP/1.1
+GET http://127.0.0.1:8080/v1/movies?page=-1&page_size=-1&sort=foo HTTP/1.1
 
 ### get movie by id
 
-GET http://127.0.0.1:4000/v1/movies/2 HTTP/1.1
+GET http://127.0.0.1:8080/v1/movies/2 HTTP/1.1
 
 
 
 ### update movie by id
 
-PATCH http://127.0.0.1:4000/v1/movies/2 HTTP/1.1
+PATCH http://127.0.0.1:8080/v1/movies/2 HTTP/1.1
 content-type: application/json
 
 {
@@ -37,7 +39,7 @@ content-type: application/json
 
 
 ### partial information update
-PATCH http://127.0.0.1:4000/v1/movies/2 HTTP/1.1
+PATCH http://127.0.0.1:8080/v1/movies/2 HTTP/1.1
 content-type: application/json
 
 {
@@ -47,12 +49,12 @@ content-type: application/json
 
 ### delete movie by id
 
-DELETE  http://127.0.0.1:4000/v1/movies/3 HTTP/1.1
+DELETE  http://127.0.0.1:8080/v1/movies/3 HTTP/1.1
 content-type: application/json
 
 
 ### create movie 1
-POST http://127.0.0.1:4000/v1/movies HTTP/1.1
+POST http://127.0.0.1:8080/v1/movies HTTP/1.1
 content-type: application/json
 
 {
@@ -64,21 +66,21 @@ content-type: application/json
 
 
 ### create movie 2 
-POST http://127.0.0.1:4000/v1/movies HTTP/1.1
+POST http://127.0.0.1:8080/v1/movies HTTP/1.1
 content-type: application/json
 
 {"title":"Black Panther","year":2018,"runtime":"134 mins","genres":["action","adventure"]}
 
 
 ### create movie 3 
-POST http://127.0.0.1:4000/v1/movies HTTP/1.1
+POST http://127.0.0.1:8080/v1/movies HTTP/1.1
 content-type: application/json
 
 {"title":"Deadpool","year":2016, "runtime":"108 mins","genres":["action","comedy"]}
 
 
 ### create movie 4
-POST http://127.0.0.1:4000/v1/movies HTTP/1.1
+POST http://127.0.0.1:8080/v1/movies HTTP/1.1
 content-type: application/json
 
 {"title":"The Breakfast Club","year":1986, "runtime":"96 mins","genres":["drama"]}
@@ -89,28 +91,28 @@ content-type: application/json
 
 
 ### input error tests
-POST http://127.0.0.1:4000/v1/movies HTTP/1.1
+POST http://127.0.0.1:8080/v1/movies HTTP/1.1
 content-type: application/json
 
 {"title":"","year":1000,"runtime":"-123 mins","genres":["sci-fi","sci-fi"]}
 
 ### 
 
-POST http://127.0.0.1:4000/v1/movies HTTP/1.1
+POST http://127.0.0.1:8080/v1/movies HTTP/1.1
 content-type: application/json
 
 {"title":"Moana","runtime":"123 mins"}
 
 ### 
 
-POST http://127.0.0.1:4000/v1/movies HTTP/1.1
+POST http://127.0.0.1:8080/v1/movies HTTP/1.1
 content-type: application/json
 
 {"title": "Moana"}{"title": "Top Gun"}
 
 ### 
 
-POST http://127.0.0.1:4000/v1/movies HTTP/1.1
+POST http://127.0.0.1:8080/v1/movies HTTP/1.1
 content-type: application/json
 
 {"title": "Moana"} :~()
