@@ -80,15 +80,15 @@ This little practice follows the book, [Let's Go Further](https://lets-go-furthe
 - [x] 13.5. Graceful Shutdown of Background Tasks
 
 14.  User Activation
-- [ ] 14.1. Setting up the Tokens Database Table
-- [ ] 14.2. Creating Secure Activation Tokens
-- [ ] 14.3. Sending Activation Tokens
-- [ ] 14.4. Activating a User
+- [x] 14.1. Setting up the Tokens Database Table
+- [x] 14.2. Creating Secure Activation Tokens
+- [x] 14.3. Sending Activation Tokens
+- [x] 14.4. Activating a User
 
 15.  Authentication
-- [ ] 15.1. Authentication Options
-- [ ] 15.2. Generating Authentication Tokens
-- [ ] 15.3. Authenticating Requests
+- [x] 15.1. Authentication Options
+- [x] 15.2. Generating Authentication Tokens
+- [x] 15.3. Authenticating Requests
 
 16.  Permission-based Authorization
 - [ ] 16.1. Requiring User Activation
