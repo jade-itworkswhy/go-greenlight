@@ -63,21 +63,21 @@ This little practice follows the book, [Let's Go Further](https://lets-go-furthe
 - [x] 10.3. Configuring the Rate Limiters
 
 11.  Graceful Shutdown
-- [ ] 11.1. Sending Shutdown Signals
-- [ ] 11.2. Intercepting Shutdown Signals
-- [ ] 11.3. Executing the Shutdown
+- [x] 11.1. Sending Shutdown Signals
+- [x] 11.2. Intercepting Shutdown Signals
+- [x] 11.3. Executing the Shutdown
 
 12.  User Model Setup and Registration
-- [ ] 12.1. Setting up the Users Database Table
-- [ ] 12.2. Setting up the Users Model
-- [ ] 12.3. Registering a User
+- [x] 12.1. Setting up the Users Database Table
+- [x] 12.2. Setting up the Users Model
+- [x] 12.3. Registering a User
 
 13.  Sending Emails
-- [ ] 13.1. SMTP Server Setup
-- [ ] 13.2. Creating Email Templates
-- [ ] 13.3. Sending a Welcome Email
-- [ ] 13.4. Sending Background Emails
-- [ ] 13.5. Graceful Shutdown of Background Tasks
+- [x] 13.1. SMTP Server Setup
+- [x] 13.2. Creating Email Templates
+- [x] 13.3. Sending a Welcome Email
+- [x] 13.4. Sending Background Emails
+- [x] 13.5. Graceful Shutdown of Background Tasks
 
 14.  User Activation
 - [ ] 14.1. Setting up the Tokens Database Table
