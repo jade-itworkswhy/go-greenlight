@@ -5,7 +5,12 @@ Hi,
 
 We're not quite sure why did you sign up for a Jade Factory account.
 
-Anyway, for future reference, your user ID number is {{.ID}}.
+Anyway, for future reference, your user ID number is {{.userID}}.
+
+Please send a request to the `PUT /v1/users/activated` endpoint with the following JSON
+body to activate your account:
+
+{"token": "{{.activationToken}}"}
 
 Thanks,
 
@@ -24,7 +29,12 @@ The Jade Factory
 <body>
     <p>Hi,</p>
     <p>We're not quite sure why did you sign up for a Jade Factory account.</p>
-    <p>Anyway, for future reference, your user ID number is {{.ID}}.</p>
+    <p>Anyway, for future reference, your user ID number is {{.userID}}.</p>
+    <p>Please send a request to the <code>PUT /v1/users/activated</code> endpoint with the 
+    following JSON body to activate your account:</p>
+    <pre><code>
+    {"token": "{{.activationToken}}"}
+    </code></pre>
     <p>Thanks,</p>
     <p>The Jade Factory</p>
 </body>
