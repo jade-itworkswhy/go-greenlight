@@ -1,7 +1,6 @@
 package main
 
 import (
-	"context"
 	"errors"
 	"fmt"
 	"log/slog"
@@ -38,10 +37,6 @@ func (app *application) serve() error {
 		// log when caught
 		app.logger.Info("caught signal", "signal", s.String())
 
-		ctx, cancel := context.WithTimeout(context.Background(), 30*time.Second)
-		defer cancel()
-
-		shutdownError <- srv.Shutdown(ctx)
 	}()
 
 	// Likewise log a "starting server" message.
