@@ -1,8 +1,14 @@
-# default - port 4000, env development
+# default - port 8080, env development
 run:
+	go run ./cmd/api
+
+run-no-limit:
+	go run ./cmd/api -limiter-enabled=false
+
+run-cors:
 	go run ./cmd/api -cors-trusted-origins="http://localhost:9000 http://localhost:9001"
 
-example:
+example-cors:
 	go run ./cmd/examples/cors/simple
 
 kill:

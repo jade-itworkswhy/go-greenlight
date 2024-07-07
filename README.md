@@ -104,10 +104,10 @@ This little practice follows the book, [Let's Go Further](https://lets-go-furthe
 - [x] 17.4. Preflight CORS Requests
 
 18.  Metrics
-- [ ] 18.1. Exposing Metrics with Expvar
-- [ ] 18.2. Creating Custom Metrics
-- [ ] 18.3. Request-level Metrics
-- [ ] 18.4. Recording HTTP Status Codes
+- [x] 18.1. Exposing Metrics with Expvar
+- [x] 18.2. Creating Custom Metrics
+- [x] 18.3. Request-level Metrics
+- [x] 18.4. Recording HTTP Status Codes
 
 19.  Building, Versioning and Quality Control
 - [ ] 19.1. Creating and Using Makefiles
