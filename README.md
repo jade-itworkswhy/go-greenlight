@@ -91,17 +91,17 @@ This little practice follows the book, [Let's Go Further](https://lets-go-furthe
 - [x] 15.3. Authenticating Requests
 
 16.  Permission-based Authorization
-- [ ] 16.1. Requiring User Activation
-- [ ] 16.2. Setting up the Permissions Database Table
-- [ ] 16.3. Setting up the Permissions Model
-- [ ] 16.4. Checking Permissions
-- [ ] 16.5. Granting Permissions
+- [x] 16.1. Requiring User Activation
+- [x] 16.2. Setting up the Permissions Database Table
+- [x] 16.3. Setting up the Permissions Model
+- [x] 16.4. Checking Permissions
+- [x] 16.5. Granting Permissions
 
 17.  Cross Origin Requests
-- [ ] 17.1. An Overview of CORS
-- [ ] 17.2. Demonstrating the Same-Origin Policy
-- [ ] 17.3. Simple CORS Requests
-- [ ] 17.4. Preflight CORS Requests
+- [x] 17.1. An Overview of CORS
+- [x] 17.2. Demonstrating the Same-Origin Policy
+- [x] 17.3. Simple CORS Requests
+- [x] 17.4. Preflight CORS Requests
 
 18.  Metrics
 - [ ] 18.1. Exposing Metrics with Expvar
