@@ -7,7 +7,6 @@ import (
 	"flag"
 	"log/slog"
 	"os"
-	"strconv"
 	"strings"
 	"sync"
 	"time"
@@ -71,12 +70,7 @@ func main() {
 
 	// todo: if the env is not found
 	// read values
-	flag.IntVar(&cfg.port, "port", func() int {
-		if p, err := strconv.Atoi(os.Getenv("PORT")); err == nil {
-			return p
-		}
-		return 8080
-	}(), "API server port")
+	flag.IntVar(&cfg.port, "port", ParseEnvToInt("PORT", 8080), "API server port")
 
 	flag.StringVar(&cfg.env, "env", os.Getenv("ENV"), "Environment (development|staging|production)")
 
@@ -90,10 +84,10 @@ func main() {
 	flag.IntVar(&cfg.limiter.burst, "limiter-burst", 4, "Rate limiter maximum burst")
 	flag.BoolVar(&cfg.limiter.enabled, "limiter-enabled", true, "Enable rate limiter")
 
-	flag.StringVar(&cfg.smtp.host, "smtp-host", "sandbox.smtp.mailtrap.io", "SMTP host")
-	flag.IntVar(&cfg.smtp.port, "smtp-port", 25, "SMTP port")
-	flag.StringVar(&cfg.smtp.username, "smtp-username", "5a7db152e21147", "SMTP username")
-	flag.StringVar(&cfg.smtp.password, "smtp-password", "80500d0556d6b6", "SMTP password")
+	flag.StringVar(&cfg.smtp.host, "smtp-host", os.Getenv("SMTP_HOST"), "SMTP host")
+	flag.IntVar(&cfg.smtp.port, "smtp-port", ParseEnvToInt("SMTP_PORT", 25), "SMTP port")
+	flag.StringVar(&cfg.smtp.username, "smtp-username", os.Getenv("SMTP_USERNAME"), "SMTP username")
+	flag.StringVar(&cfg.smtp.password, "smtp-password", os.Getenv("SMTP_PASSWORD"), "SMTP password")
 	flag.StringVar(&cfg.smtp.sender, "smtp-sender", "Jade Factory <no-reply@greenlight.fade-factory.net>", "SMTP sender")
 
 	flag.Func("cors-trusted-origins", "Trusted CORS origins (space separated)", func(val string) error {

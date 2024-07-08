@@ -8,6 +8,7 @@ import (
 	"jade-factory/greenlight/internal/validator"
 	"net/http"
 	"net/url"
+	"os"
 	"strconv"
 	"strings"
 
@@ -162,4 +163,13 @@ func (app *application) background(fn func()) {
 
 		fn()
 	}()
+}
+
+func ParseEnvToInt(envVar string, defaultValue int) int {
+	if value, exists := os.LookupEnv(envVar); exists {
+		if intValue, err := strconv.Atoi(value); err == nil {
+			return intValue
+		}
+	}
+	return defaultValue
 }

@@ -3,6 +3,11 @@ Assimiliating Go application patterns
 
 This little practice follows the book, [Let's Go Further](https://lets-go-further.alexedwards.net/) by @alexedwards
 
+
+## Get Started
+`make help` OR `make`
+
+## Progress
 1. Introduction  
 - [x] 1.1. Prerequisites
 
