@@ -115,12 +115,12 @@ This little practice follows the book, [Let's Go Further](https://lets-go-furthe
 - [x] 18.4. Recording HTTP Status Codes
 
 19.  Building, Versioning and Quality Control
-- [ ] 19.1. Creating and Using Makefiles
-- [ ] 19.2. Managing Environment Variables
-- [ ] 19.3. Quality Controlling Code
-- [ ] 19.4. Module Proxies and Vendoring
-- [ ] 19.5. Building Binaries
-- [ ] 19.6. Managing and Automating Version Numbers
+- [x] 19.1. Creating and Using Makefiles
+- [x] 19.2. Managing Environment Variables
+- [x] 19.3. Quality Controlling Code
+- [x] 19.4. Module Proxies and Vendoring
+- [x] 19.5. Building Binaries
+- [x] 19.6. Managing and Automating Version Numbers
 
 20.  Deployment and Hosting
 - [ ] 20.1. Creating a Digital Ocean Droplet
