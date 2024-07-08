@@ -5,6 +5,7 @@ import (
 	"database/sql"
 	"expvar"
 	"flag"
+	"fmt"
 	"log/slog"
 	"os"
 	"strings"
@@ -13,15 +14,16 @@ import (
 
 	"jade-factory/greenlight/internal/data"
 	"jade-factory/greenlight/internal/mailer"
+	"jade-factory/greenlight/internal/vcs"
 
 	"github.com/joho/godotenv"
 	_ "github.com/lib/pq"
 )
 
-// todo: will be generated at build time
-const version = "1.0.0"
+var (
+	version = vcs.Version()
+)
 
-// todo: read config when the app starts
 type config struct {
 	port int
 	env  string
@@ -95,7 +97,17 @@ func main() {
 		return nil
 	})
 
+	// Create a new version boolean flag with the default value of false.
+	displayVersion := flag.Bool("version", false, "Display version and exit")
+
 	flag.Parse()
+
+	// If the version flag value is true, then print out the version number and
+	// immediately exit.
+	if *displayVersion {
+		fmt.Printf("Version:\t%s\n", version)
+		os.Exit(0)
+	}
 
 	db, err := openDB(cfg)
 	if err != nil {

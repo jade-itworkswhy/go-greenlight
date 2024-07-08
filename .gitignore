@@ -24,3 +24,6 @@ go.work
 tmp
 
 *.env
+docker-compose.yml
+Dockerfile
+bin/

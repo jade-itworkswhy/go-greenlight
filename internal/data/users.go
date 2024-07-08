@@ -22,7 +22,7 @@ type User struct {
 	ID        int64     `json:"id"`
 	CreatedAt time.Time `json:"created_at"`
 	Name      string    `json:"name"`
-	Email     string    `json"email"`
+	Email     string    `json:"email"`
 	Password  password  `json:"-"` // will be ignored in JSON serialization/deserialization
 	Activated bool      `json:"activated"`
 	Version   int       `json:"-"`
